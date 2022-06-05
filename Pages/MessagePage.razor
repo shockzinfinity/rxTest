@@ -1,0 +1,17 @@
+﻿@page "/message"
+@implements IDisposable
+@inject IMessageService MessageService
+
+<div page="MessagePage">
+  <CounterComponent />
+
+  <p>Subscriber 1 - Last message received: @Message1</p>
+  <p>Subscriber 2 - Last message received: @Message2</p>
+
+  <button class="btn btn-primary" @onclick=Unsubscribe1>Unsubscribe 1</button>
+  <button class="btn btn-primary" @onclick=Unsubscribe2>Unsubscribe 2</button>
+
+  <br /><br />
+
+  <button class="btn btn-primary" @onclick=OnInitialized>Subscribe All</button>
+</div>

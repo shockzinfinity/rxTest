@@ -1,0 +1,9 @@
+﻿@implements IDisposable
+@inject ICounterService CounterService
+@inject IMessageService MessageService
+
+<div component="CounterComponent">
+  <p>Current Count: @count</p>
+
+  <button class="btn btn-primary" @onclick=CounterService.Increment>Click Me</button>
+</div>
